@@ -25,7 +25,7 @@ Formatting a partition \$ sudo mkfs.ext4 \[partition path\]
 
 step4 - <br />
 Create a folder on root \$ sudo mkdir \[folder name\]  <br />
-step5 -
+step5 -  <br />
 Mount the folder on crated partition \ <br />
 $ sudo mount -t auto \[partition
 path\] \[Folder name\]
