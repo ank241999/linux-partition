@@ -8,10 +8,12 @@ sudo fdisk \[disk path\]
 
 b) Using the command mode  - choose prompt \'n\'  - choose promot \'p\'
  - partition number choose default prompt \'1\'  - first sector or
-specify the size for your partition c) Setting the partition type  -
+specify the size for your partition
+c) Setting the partition type  -
 change the ID for our partition, we will use the command 't'.  - HEX
 code 8e is the partition ID for the 'Linux LVM' partition type, choose
-\'8e\' d) see the detailed list of partitions choose \'p\' e) save
+\'8e\'
+ d) see the detailed list of partitions choose \'p\' e) save
 changes , choose \'w\'
 
 step3 - Formatting a partition \$ sudo mkfs.ext4 \[partition path\]
