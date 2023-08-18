@@ -6,7 +6,7 @@ following command \  <br />
 $ sudo fdisk -l
 
 step2 -  <br />
-a) choose one disk from this list to partition \[disk path\] \$
+a) choose one disk from this list to partition \[disk path\] $
 sudo fdisk \[disk path\]  <br />
 
 b) Using the command mode  - choose prompt \'n\'  <br />
@@ -26,6 +26,6 @@ Formatting a partition \$ sudo mkfs.ext4 \[partition path\]
 step4 - <br />
 Create a folder on root \$ sudo mkdir \[folder name\]  <br />
 step5 -  <br />
-Mount the folder on crated partition \ <br />
+Mount the folder on crated partition  <br />
 $ sudo mount -t auto \[partition
 path\] \[Folder name\]
