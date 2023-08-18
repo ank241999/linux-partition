@@ -4,15 +4,15 @@ Step1 - view all the partitions currently on your system, we use the
 following command \$ sudo fdisk -l
 
 step2 - a) choose one disk from this list to partition \[disk path\] \$
-sudo fdisk \[disk path\]
+sudo fdisk \[disk path\]  <br />
 
 b) Using the command mode  - choose prompt \'n\'  - choose promot \'p\'
  - partition number choose default prompt \'1\'  - first sector or
-specify the size for your partition
+specify the size for your partition <br />
 c) Setting the partition type  -
 change the ID for our partition, we will use the command 't'.  - HEX
 code 8e is the partition ID for the 'Linux LVM' partition type, choose
-\'8e\'
+\'8e\'  <br />
  d) see the detailed list of partitions choose \'p\' e) save
 changes , choose \'w\'
 
