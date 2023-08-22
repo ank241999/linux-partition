@@ -1,31 +1,88 @@
-\"Create a Partition in Linux\"
+﻿**"Create a Partition in Linux"**
 
-Step1 -  <br />
-view all the partitions currently on your system, we use the
-following command \  <br />
-$ sudo fdisk -l
+Step 1: - View all the partitions currently on your system by using the following command :- 
 
-step2 -  <br />
-a) choose one disk from this list to partition \[disk path\] $
-sudo fdisk \[disk path\]  <br />
+`   `$ sudo fdisk -l
 
-b) Using the command mode  - choose prompt \'n\'  <br />
- - choose promot \'p\'
- - partition number choose default prompt \'1\'  <br />
- - first sector or specify the size for your partition <br />
-c) Setting the partition type  -
-change the ID for our partition, we will use the command 't'.  <br />
-- HEX code 8e is the partition ID for the 'Linux LVM' partition type, choose
-\'8e\'  <br />
- d) see the detailed list of partitions choose \'p\'  <br />
- e) save changes , choose \'w\'
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.001.png)
 
-step3 - <br />
-Formatting a partition \$ sudo mkfs.ext4 \[partition path\]
+Figure 1
 
-step4 - <br />
-Create a folder on root \$ sudo mkdir \[folder name\]  <br />
-step5 -  <br />
-Mount the folder on crated partition  <br />
-$ sudo mount -t auto \[partition
-path\] \[Folder name\]
+Step2 -
+
+1) Choose one disk from this list to partition [disk path]  For ex:-  Selected disk path from Figure 1 is:- /dev/nvme1n1
+
+`   `$ sudo fdisk [disk path] 
+
+
+
+` `b) Using the command mode
+
+`   `- choose prompt 'n'
+
+`   `- choose promot 'p'
+
+`   `- partition number choose default prompt '1'
+
+`   `- first sector or specify the size for your partition 
+
+
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.002.png)
+
+Figure 2
+
+
+
+
+` `c) Setting the partition type
+
+`   `- change the ID for our partition, we will use the command ‘t’. 
+
+`   `- HEX code 8e is the partition ID for the ‘Linux LVM’ partition type, choose '8e'
+
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.003.png)
+
+Figure 3
+
+` `d) To see the detailed list of partitions choose 'p'
+
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.004.png)
+
+Figure 4
+
+` `e) To save changes , choose 'w'
+
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.005.png)
+
+Figure 5
+
+
+
+
+
+Step3 -  Formatting a partition 
+
+$ sudo mkfs.ext4 [partition path] 
+
+Partition path is:- /dev/nvme1n1p1
+
+Step4 -  Create a folder on root 
+
+$ sudo mkdir [folder name]         (/db is our folder name.)
+
+Step5 -Mount the folder on crated partition 
+
+Partition path :- /dev/nvme1n1p1
+
+Folder name:- /db
+
+$ sudo mount -t auto [partition path] [Folder name]
+
+Step6:- Check the disk partiton by :-
+
+$ df -h
+
+![](Aspose.Words.354e2217-d139-4135-818b-9bf406cd4d28.006.png)
+
+Figure 6
+
